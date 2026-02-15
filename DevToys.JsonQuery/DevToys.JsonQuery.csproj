@@ -1,0 +1,86 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>true</IsPackable>
+    <Version>1.0.0</Version>
+    <Title>DevToys.JsonQuery</Title>
+    <Description>A jq runner extension for DevToys to run queries against json structures</Description>
+    <PackageProjectUrl>https://my-website.com</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/user/repository</RepositoryUrl>
+    <Authors>Tarnix</Authors>
+    <PackageTags>devtoys-app</PackageTags>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\jq-icon.ttf" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="CliWrap" Version="3.10.0" />
+    <PackageReference Include="Devlooped.JQ" Version="1.8.1" />
+    <PackageReference Include="DevToys.Api" Version="2.0.9-preview" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="JsonQueryResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>JsonQueryResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="JsonQueryResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>JsonQueryResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  
+  <Target Name="DownloadLatest" BeforeTargets="Build" Condition="!Exists('runtimes/osx-arm64/lib/jq-macos-arm64')">
+    <Exec Command="if not exist runtimes/win-x86/lib ( mkdir runtimes\win-x86\lib )" />
+    <Exec Command="curl -Lo runtimes/win-x86/lib/jq-windows-i386.exe https://github.com/jqlang/jq/releases/latest/download/jq-windows-i386.exe" />
+    
+    <Exec Command="if not exist runtimes/win-x64/lib ( mkdir runtimes\win-x64\lib )" />
+    <Exec Command="curl -Lo runtimes/win-x64/lib/jq-win64.exe https://github.com/jqlang/jq/releases/latest/download/jq-win64.exe" />
+    
+    
+    <Exec Command="if not exist runtimes/linux-x86/lib ( mkdir runtimes\linux-x86\lib )" />
+    <Exec Command="curl -Lo runtimes/linux-x86/lib/jq-linux-i386 https://github.com/jqlang/jq/releases/latest/download/jq-linux-i386" />
+    
+    <Exec Command="if not exist runtimes/linux-x64/lib ( mkdir runtimes\linux-x64\lib )" />
+    <Exec Command="curl -Lo runtimes/linux-x64/lib/jq-linux-amd64 https://github.com/jqlang/jq/releases/latest/download/jq-linux-amd64" />
+    
+    <Exec Command="if not exist runtimes/linux-arm64/lib ( mkdir runtimes\linux-arm64\lib )" />
+    <Exec Command="curl -Lo runtimes/linux-arm64/lib/jq-linux-arm64 https://github.com/jqlang/jq/releases/latest/download/jq-linux-arm64" />
+
+    
+    <Exec Command="if not exist runtimes/osx-x64/lib ( mkdir runtimes\osx-x64\lib )" />
+    <Exec Command="curl -Lo runtimes/osx-x64/lib/jq-macos-amd64 https://github.com/jqlang/jq/releases/latest/download/jq-macos-amd64" />
+    
+    <Exec Command="if not exist runtimes/osx-arm64/lib ( mkdir runtimes\osx-arm64\lib )" />
+    <Exec Command="curl -Lo runtimes/osx-arm64/lib/jq-macos-arm64 https://github.com/jqlang/jq/releases/latest/download/jq-macos-arm64" />
+  </Target>
+
+  <Target Name="IncludeAllFilesInTargetDir" BeforeTargets="_GetPackageFiles">
+    <ItemGroup>
+      <None Include="$(OutputPath)\**">
+        <Pack>true</Pack>
+        <PackagePath>lib\net8.0</PackagePath>
+      </None>
+    </ItemGroup>
+  </Target>
+
+</Project>

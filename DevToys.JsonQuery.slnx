@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../../oss/DevToys.Tools/src/DevToys.Tools/DevToys.Tools.csproj" />
+  <Project Path="DevToys.JsonQuery/DevToys.JsonQuery.csproj" />
+</Solution>
