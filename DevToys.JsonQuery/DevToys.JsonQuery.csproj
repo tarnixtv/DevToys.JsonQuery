@@ -9,8 +9,8 @@
     <Version>1.0.0</Version>
     <Title>DevToys.JsonQuery</Title>
     <Description>A jq runner extension for DevToys to run queries against json structures</Description>
-    <PackageProjectUrl>https://my-website.com</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/user/repository</RepositoryUrl>
+    <PackageProjectUrl>https://tarnixtv.github.io/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/tarnixtv/DevToys.JsonQuery</RepositoryUrl>
     <Authors>Tarnix</Authors>
     <PackageTags>devtoys-app</PackageTags>
   </PropertyGroup>
