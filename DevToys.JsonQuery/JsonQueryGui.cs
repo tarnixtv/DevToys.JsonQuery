@@ -229,7 +229,14 @@ internal sealed class JsonQueryGui : IGuiTool
             string? result = null;
             try
             {
-                result = await JQ.ExecuteAsync(json, query);
+                var jqResult = await JQ.ExecuteAsync(new(json, query));
+
+                _errorLabel.Text(jqResult.StandardError);
+
+                if (jqResult.ExitCode == 0)
+                {
+                    result = jqResult.StandardOutput;
+                }
             }
             catch (Exception ex)
             {
