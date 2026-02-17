@@ -1,5 +1,7 @@
 # DevToys.JsonQuery
 
+[![Version](https://img.shields.io/nuget/v/DevToys.JsonQuery.svg?color=royalblue)](https://www.nuget.org/packages/DevToys.JsonQuery) 
+
 A [DevToys](https://devtoys.app/) plugin to run [jq](https://jqlang.org/) queries.
 
 Howto:
