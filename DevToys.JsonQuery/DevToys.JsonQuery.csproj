@@ -4,18 +4,27 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
+  </PropertyGroup>
 
+  <PropertyGroup>
     <IsPackable>true</IsPackable>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Title>DevToys.JsonQuery</Title>
-    <Description>A jq runner extension for DevToys to run queries against json structures</Description>
+    <Description>A jq runner extension for DevToys to run queries on json structures</Description>
+    <PackageProjectUrl>https://tarnix.tv/DevToys.JsonQuery</PackageProjectUrl>
     <RepositoryUrl>https://github.com/tarnixtv/DevToys.JsonQuery</RepositoryUrl>
     <Authors>Tarnix</Authors>
+    <Copyright>Copyright (c) Tarnix 2026</Copyright>
     <PackageTags>devtoys-app</PackageTags>
+    <DebugType>embedded</DebugType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
   </PropertyGroup>
   
   <ItemGroup>
     <EmbeddedResource Include="Assets\jq-icon.ttf" />
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+    <None Include="..\LICENSE.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
   
   <ItemGroup>
