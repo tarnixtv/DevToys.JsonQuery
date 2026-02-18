@@ -65,9 +65,6 @@ internal sealed class JsonQueryGuiTool : IGuiTool
     private readonly IUISingleLineTextInput _inputJsonQuery = SingleLineTextInput("input-json-json-query-tester");
     private readonly IUIMultiLineTextInput _outputJson = MultiLineTextInput("output-json-query-tester");
     private readonly IUILabel _errorLabel = Label();
-    private readonly IUISettingGroup _outputFormatSettingGroup = SettingGroup();
-    private readonly IUISetting _whitespaceSetting = Setting();
-    private readonly IUISetting _indentSetting = Setting();
 
 
     private CancellationTokenSource? _cancellationTokenSource;
