@@ -201,4 +201,25 @@
   <data name="CheatSheetExample" xml:space="preserve">
     <value>Example</value>
   </data>
+  <data name="Configuration" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="Indentation" xml:space="preserve">
+    <value>Indentation</value>
+  </data>
+  <data name="SortKeys" xml:space="preserve">
+    <value>Sort Keys</value>
+  </data>
+  <data name="TwoSpaces" xml:space="preserve">
+    <value>2 Spaces</value>
+  </data>
+  <data name="FourSpaces" xml:space="preserve">
+    <value>4 Spaces</value>
+  </data>
+  <data name="OneTab" xml:space="preserve">
+    <value>1 Tab</value>
+  </data>
+  <data name="Minified" xml:space="preserve">
+    <value>Minified</value>
+  </data>
 </root>

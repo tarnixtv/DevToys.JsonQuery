@@ -196,11 +196,38 @@ namespace DevToys.JsonQuery {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Configuration.
+        /// </summary>
+        public static string Configuration {
+            get {
+                return ResourceManager.GetString("Configuration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A jq runner extension for DevToys to run queries against json structures.
         /// </summary>
         public static string Description {
             get {
                 return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 4 Spaces.
+        /// </summary>
+        public static string FourSpaces {
+            get {
+                return ResourceManager.GetString("FourSpaces", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Indentation.
+        /// </summary>
+        public static string Indentation {
+            get {
+                return ResourceManager.GetString("Indentation", resourceCulture);
             }
         }
         
@@ -268,11 +295,29 @@ namespace DevToys.JsonQuery {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Minified.
+        /// </summary>
+        public static string Minified {
+            get {
+                return ResourceManager.GetString("Minified", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No match found.
         /// </summary>
         public static string NoMatchFound {
             get {
                 return ResourceManager.GetString("NoMatchFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1 Tab.
+        /// </summary>
+        public static string OneTab {
+            get {
+                return ResourceManager.GetString("OneTab", resourceCulture);
             }
         }
         
@@ -309,6 +354,24 @@ namespace DevToys.JsonQuery {
         public static string ShortDisplayTitle {
             get {
                 return ResourceManager.GetString("ShortDisplayTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sort Keys.
+        /// </summary>
+        public static string SortKeys {
+            get {
+                return ResourceManager.GetString("SortKeys", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 2 Spaces.
+        /// </summary>
+        public static string TwoSpaces {
+            get {
+                return ResourceManager.GetString("TwoSpaces", resourceCulture);
             }
         }
     }

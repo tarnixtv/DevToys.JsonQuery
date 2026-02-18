@@ -8,7 +8,7 @@
 
   <PropertyGroup>
     <IsPackable>true</IsPackable>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
     <Title>DevToys.JsonQuery</Title>
     <Description>A jq runner extension for DevToys to run queries on json structures</Description>
     <PackageProjectUrl>https://tarnix.tv/DevToys.JsonQuery</PackageProjectUrl>
